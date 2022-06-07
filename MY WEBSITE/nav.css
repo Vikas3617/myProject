@@ -1,0 +1,55 @@
+  
+
+
+.mid {
+    display: block;
+    width: 45%;
+    margin: 29px auto;
+    /* border: 2px solid green; */
+}
+
+.navbar {
+    display: inline-block;
+    /* border: solid yellow */
+}
+
+.navbar li {
+    display: inline-block;
+    font-size: 25px;
+    /* border: solid red; */
+}
+
+.navbar li a {
+    color: white;
+    text-decoration: none;
+    padding: 34px 23px;
+
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+    text-decoration: underline;
+    color: grey;
+
+}
+
+.right {
+    position: absolute;
+    right: 34px;
+    top: 43px;
+    display: inline-block;
+    /* border: 2px solid yellow; */
+}
+
+
+.btn {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px 9px;
+    background-color: black;
+    color: white;
+    padding: 4px 14px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}

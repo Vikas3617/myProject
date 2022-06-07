@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="nav.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('img/reg2.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .trans {
+            /* border: 1px solid rgba(255,255,255,0.3); */
+            /* border-color: red; */
+            padding: right 12px;
+            width: 399px;
+            margin-left: 307px;
+            padding-left: 0px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            box-shadow: shadow 2px 2px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            border: rgb(27, 26, 26) solid;
+            text-align: center;
+            font-size: xx-large;
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+            background-color: rgb(17, 15, 15);
+            border-radius: 20px;
+        }
+
+        form {
+            color: white;
+            font-size: larger;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 100px;
+            padding-left: 0px;
+        }
+
+        div#register {
+            color: rgb(168, 158, 158);
+            font-style: italic;
+            font-weight: bold;
+        }
+
+
+        #register input {
+            border-color: rgb(8, 8, 8);
+            padding: 5px 20px;
+            /* width: 200px;*/
+        }
+
+        .bot {
+            background-color: rgb(204, 201, 201);
+            border: rgba(7, 7, 7, 0);
+            width: 100px;
+            padding: 4px 6px 4px 4px;
+            cursor: pointer;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .bot:hover {
+            background-color: rgba(47, 47, 48, 0);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Registration Form</h1>
+        <div class="trans">
+            <form name="myForm" id="register" action="backand.php" onsubmit="return validation()" method="post">
+                <label>First Name:</label><br>
+                <div id=" form">
+                    <input class="input" type="text" name="fname" required placeholder="Enter Your First Name">
+                    <br><br>
+
+                    <label>Last Name:</label><br>
+                    <input type="text" name="Lname" required placeholder="Enter Your Last Name">
+                    <br><br>
+
+                    <label>Age:</label><br>
+                    <input type="number" name="age" required placeholder="Enter Your Age">
+                    <br><br>
+
+                    <label>Gender:</label><br>
+                    Male <input type="radio" name="Gender"> Female <input type="radio" name="Gender">
+                    <br><br>
+
+                    <label>Mobile No.:</label><br>
+                    <input type="tel" name="Mobile" minlength="10" maxlength="10" pattern="[0-9]{10}" placeholder="Mobile Number">
+                    <br><br>
+
+                    <label>Email:</label><br>
+                    <input type="email" name="email" placeholder="exmple@gmail.com">
+                    <br><br>
+
+                    <label>Address:</label><br>
+                    <input type="text" name="add" placeholder="Parmanent Address">
+                    <br><br>
+                </div>
+                <button class="bot" value="Submit Now" type="submit">SUBMIT
+
+                </button>
+                <button class="bot" value="Submit Now">RESET
+                </button>
+            
+        </div>
+    </form>
+        <div class="mid">
+            <ul class="navbar">
+                <li> <a href="MY_PAGE.HTML">HOME</a></li>
+                <li> <a href="About_Us.html">ABOUT US</a></li>
+                <li> <a href="#">PHOTO</a></li>
+                <li> <a href="#">VIDEOS</a></li>
+            </ul>
+
+
+
+            
+
+        </div>
+</body>
+<script>
+    function validation() { 
+        debugger;
+        let name = document.forms["myForm"]["fname"].value;
+        let lname= document.forms["myForm"]["Lname"].value;
+        let age = document.forms["myForm"]["age"].value;
+        let Gender = document.forms["myForm"]["Gender"].value;
+        let mob = document.forms["myForm"]["Mobile"].value;
+        let mail = document.forms["myForm"]["email"].value;
+        if (name == "") {
+            alert("Name must be filled out");
+            return false;
+        }
+        if(lname == "") {
+            alert(" Last Name must be filled out");
+            return false;
+        }
+        if(age == "") {
+            alert(" age must be filled out");
+            return false;
+        }
+        if(Gender == "") {
+            alert(" Gender must be filled out");
+            return false;
+        }
+        if(mob == "") {
+            alert(" Mobile No. must be filled out");
+            return false;
+        }
+        if(mail == "") {
+            alert(" Eamil address must be filled out");
+            return false;
+        }
+    }
+</script>
+
+</html>
